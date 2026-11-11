@@ -15,6 +15,12 @@ jobs:
       - uses: actions/setup-java@v4
         with: { distribution: temurin, java-version: 21 }
       - uses: android-actions/setup-android@v3
+      - name: Organizar arquivos
+        run: |
+          mkdir -p www assets keystore
+          mv app.js index.html styles.css sw.js manifest.webmanifest icon.svg icon-192.png icon-512.png www/
+          mv icon-only.png icon-foreground.png icon-background.png assets/
+          mv debug.keystore keystore/
       - run: npm install
       - run: npx cap add android
       - name: Ícones
