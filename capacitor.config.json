@@ -1,0 +1,6 @@
+{
+  "appId": "br.com.casaemordem.app",
+  "appName": "Casa em Ordem",
+  "webDir": "www",
+  "android": { "adjustMarginsForEdgeToEdge": "auto" }
+}
